@@ -69,6 +69,20 @@
         .game-view iframe{width:100vw;height:100vh;border:none;}
         .back-button{position:fixed;top:20px;left:20px;padding:10px 20px;background-color:#141414;color:white;border:1px solid white;font-size:16px;cursor:pointer;box-shadow:0 4px 6px rgba(0,0,0,0.1);border-radius:16px;}
         .back-button:hover{transform:scale(1.05);box-shadow:0 8px 30px rgba(0,0,0,0.7);}
+        .pp-banner-partner{position:fixed;top:20px;right:20px;z-index:999999;transition:transform 0.3s ease;transform:translateX(120%);}
+        .pp-banner-partner.show{transform:translateX(0);}
+        .pp-banner-partner img{max-width:220px;height:auto;overflow:hidden;box-shadow:0 0 10px 0 rgba(0,0,0,0.4);transition:transform 0.3s ease;border-radius:10px;}
+        .pp-banner-partner img:hover{transform:scale(1.05);}
+        .pp-banner-close-button{position:absolute;top:-10px;right:-10px;width:24px;height:24px;background:#fff;border-radius:50%;display:flex;border:1px solid rgb(143,138,138);align-items:center;justify-content:center;cursor:pointer;box-shadow:0 0 5px rgba(0,0,0,0.3);z-index:1000000;}
+        .pp-banner-close-button::before,.pp-banner-close-button::after{content:'';position:absolute;width:12px;height:2px;background:#333;transform-origin:center;}
+        .pp-banner-close-button::before{transform:rotate(45deg);}
+        .pp-banner-close-button::after{transform:rotate(-45deg);}
+        .pp-banner-close-button:hover{transform:scale(1.1);}
+        div.pp-banner-iframe{position:fixed;top:20px;right:20px;z-index:999999;transition:transform 0.3s ease;transform:translateX(120%);overflow:visible;border-radius:10px;border:1px solid rgb(185,185,185);box-shadow:0 0 10px 0 rgba(0,0,0,0.4);padding:4px;background:white;}
+        div.pp-banner-iframe.show{transform:translateX(0);}
+        div.pp-banner-iframe > iframe{position:static;top:auto;left:auto;right:auto;bottom:auto;transform:none;border:none;border-radius:10px;display:block;margin:0;padding:0;box-shadow:none;opacity:1;visibility:visible;}
+        .pp-banner-iframe,.pp-banner-iframe *{box-sizing:border-box;}
+        .pp-banner-hide{transform:translateX(120%);}
     </style>
 </head>
 <body>
@@ -114,7 +128,7 @@
         function debounce(func,wait){let timeout;return function executedFunction(...args){const later=()=>{clearTimeout(timeout);func(...args);};clearTimeout(timeout);timeout=setTimeout(later,wait);}}
         function getFilteredGames(){const searchInput=document.getElementById('search-games').value.toLowerCase();const category=document.getElementById('gameFilter').value.toLowerCase();let filteredGames=games;if(searchInput){filteredGames=filteredGames.filter(game=>game.label.toLowerCase().includes(searchInput));}if(category){filteredGames=filteredGames.filter(game=>game.categories.includes(category));}return filteredGames;}
         function filterItems(){currentPage=1;const filteredGames=getFilteredGames();displayGames(filteredGames.slice(0,gamesPerPage));updateLoadMoreButton();}
-        function showGame(url){document.querySelector('.main-content').style.display='none';document.getElementById('gameView').style.display='flex';document.getElementById('gameFrame').src=url;}
+        async function showGame(url){try{const response=await fetch(url);const html=await response.text();const baseUrl=url.substring(0,url.lastIndexOf('/')+1);const modifiedHtml=html.replace('<head>','<head><base href="'+baseUrl+'">');document.querySelector('.main-content').style.display='none';document.getElementById('gameView').style.display='flex';document.getElementById('gameFrame').src='data:text/html;charset=utf-8,'+encodeURIComponent(modifiedHtml);}catch(error){console.error('Error loading game:',error);document.getElementById('gameFrame').src=url;}}
         function showGameList(){document.getElementById('gameView').style.display='none';document.querySelector('.main-content').style.display='block';document.getElementById('gameFrame').src='';}
         function randomGameOpen(){if(games.length>0){const randomIndex=Math.floor(Math.random()*games.length);showGame(games[randomIndex].url);}}
         function filterByCategory(){filterItems();}
