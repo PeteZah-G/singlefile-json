@@ -125,7 +125,7 @@
 
         async function loadGames() {
             try {
-                const response = await fetch('https://cdn.jsdelivr.net/gh/PeteZah-G/singlefile-json@main/library.json?t=' + Date.now());
+                const response = await fetch('https://cdn.jsdelivr.net/gh/PeteZah-G/singlefile-json@main/games.json?t=' + Date.now());
                 games = (await response.json()).games;
                 displayGames(games.slice(0, gamesPerPage));
                 updateLoadMoreButton();
@@ -215,9 +215,8 @@
                 if (!normalizedUrl.endsWith('index.html') && !normalizedUrl.match(/\.\w+$/)) {
                     normalizedUrl = normalizedUrl.replace(/\/$/, '') + '/index.html';
                 }
-                // Use CORS proxy for fetching
-                const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(normalizedUrl + '?t=' + Date.now());
-                const response = await fetch(proxyUrl);
+                // Fetch directly from jsDelivr
+                const response = await fetch(normalizedUrl + '?t=' + Date.now());
                 if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
                 let html = await response.text();
                 // Compute base URL (use directory of normalized URL)
@@ -244,8 +243,7 @@
                 scripts.forEach(oldScript => {
                     const newScript = gameFrame.contentDocument.createElement('script');
                     if (oldScript.src) {
-                        // Use proxy for external scripts
-                        newScript.src = oldScript.src.startsWith('http') ? 'https://corsproxy.io/?' + encodeURIComponent(oldScript.src) : oldScript.src;
+                        newScript.src = oldScript.src;
                     } else {
                         newScript.textContent = oldScript.textContent;
                     }
