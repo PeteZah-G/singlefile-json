@@ -210,11 +210,18 @@
 
         async function showGame(url) {
             try {
-                const response = await fetch(url + '?t=' + Date.now(), { mode: 'cors' });
+                // Normalize URL to include /index.html if not present
+                let normalizedUrl = url;
+                if (!normalizedUrl.endsWith('index.html') && !normalizedUrl.match(/\.\w+$/)) {
+                    normalizedUrl = normalizedUrl.replace(/\/$/, '') + '/index.html';
+                }
+                // Use CORS proxy for fetching
+                const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(normalizedUrl + '?t=' + Date.now());
+                const response = await fetch(proxyUrl);
                 if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
                 let html = await response.text();
-                // Compute base URL
-                const baseUrl = url.replace(/\/[^\/]*$/, '/');
+                // Compute base URL (use directory of normalized URL)
+                const baseUrl = normalizedUrl.replace(/\/[^\/]*$/, '/');
                 // Inject <base> tag into <head>
                 if (!html.match(/<head[^>]*>/i)) {
                     html = html.replace(/<html[^>]*>/i, '$&<head><base href="' + baseUrl + '"></head>');
@@ -237,7 +244,8 @@
                 scripts.forEach(oldScript => {
                     const newScript = gameFrame.contentDocument.createElement('script');
                     if (oldScript.src) {
-                        newScript.src = oldScript.src;
+                        // Use proxy for external scripts
+                        newScript.src = oldScript.src.startsWith('http') ? 'https://corsproxy.io/?' + encodeURIComponent(oldScript.src) : oldScript.src;
                     } else {
                         newScript.textContent = oldScript.textContent;
                     }
