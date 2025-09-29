@@ -209,10 +209,6 @@
         }
 
         async function showGame(url) {
-            if (url.startsWith('http')) {
-                window.open(url, '_blank');
-                return;
-            }
             try {
                 const response = await fetch(url + '?t=' + Date.now(), { mode: 'cors' });
                 if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
@@ -220,7 +216,7 @@
                 // Compute base URL
                 const baseUrl = url.replace(/\/[^\/]*$/, '/');
                 // Inject <base> tag into <head>
-                if (!html.includes('<head>') && !html.includes('<HEAD>')) {
+                if (!html.match(/<head[^>]*>/i)) {
                     html = html.replace(/<html[^>]*>/i, '$&<head><base href="' + baseUrl + '"></head>');
                 } else {
                     html = html.replace(/<head[^>]*>/i, '$&<base href="' + baseUrl + '">');
@@ -230,18 +226,33 @@
                 if (gameFrame.contentDocument === null) {
                     gameFrame = document.createElement('iframe');
                     gameFrame.id = 'gameFrame';
+                    gameFrame.style.cssText = 'width:100vw;height:100vh;border:none;';
                     document.getElementById('gameView').appendChild(gameFrame);
                 }
                 gameFrame.contentDocument.open();
                 gameFrame.contentDocument.write(html);
                 gameFrame.contentDocument.close();
+                // Ensure scripts are executed
+                const scripts = gameFrame.contentDocument.querySelectorAll('script');
+                scripts.forEach(oldScript => {
+                    const newScript = gameFrame.contentDocument.createElement('script');
+                    if (oldScript.src) {
+                        newScript.src = oldScript.src;
+                    } else {
+                        newScript.textContent = oldScript.textContent;
+                    }
+                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                });
                 document.querySelector('.main-content').style.display = 'none';
                 document.getElementById('gameView').style.display = 'flex';
             } catch (error) {
                 console.error('Error loading game:', error);
                 alert('Failed to load game: ' + error);
-                // Fallback to opening in new tab
-                window.open(url, '_blank');
+                document.getElementById('gameFrame').contentDocument.open();
+                document.getElementById('gameFrame').contentDocument.write('<h1>Error loading game: ' + error + '</h1>');
+                document.getElementById('gameFrame').contentDocument.close();
+                document.querySelector('.main-content').style.display = 'none';
+                document.getElementById('gameView').style.display = 'flex';
             }
         }
 
