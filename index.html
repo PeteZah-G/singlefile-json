@@ -203,29 +203,33 @@
             updateLoadMoreButton();
         }
 
-        function showGame(url) {
-            const baseUrl = url.replace(/\/[^\/]*$/, '/');
-            const wrapperHtml = `
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <base href="${baseUrl}">
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <style>
-                        html, body { margin: 0; padding: 0; width: 100%; height: 100%; }
-                        iframe { width: 100%; height: 100%; border: none; }
-                    </style>
-                </head>
-                <body>
-                    <iframe src="${url}" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
-                </body>
-                </html>
-            `;
-            document.querySelector('.main-content').style.display = 'none';
-            document.getElementById('gameView').style.display = 'flex';
-            document.getElementById('gameFrame').src = '';
-            document.getElementById('gameFrame').srcdoc = wrapperHtml;
+        async function showGame(url) {
+            try {
+                // Attempt to fetch the game HTML
+                const response = await fetch(url, { mode: 'cors' });
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                let html = await response.text();
+                // Compute base URL
+                const baseUrl = url.replace(/\/[^\/]*$/, '/');
+                // Inject <base> tag into <head>
+                if (!html.includes('<head>') && !html.includes('<HEAD>')) {
+                    html = html.replace(/<html[^>]*>/i, '$&<head><base href="' + baseUrl + '"></head>');
+                } else {
+                    html = html.replace(/<head[^>]*>/i, '$&<base href="' + baseUrl + '">');
+                }
+                // Ensure HTML is treated as HTML, not plaintext
+                document.querySelector('.main-content').style.display = 'none';
+                document.getElementById('gameView').style.display = 'flex';
+                document.getElementById('gameFrame').src = '';
+                document.getElementById('gameFrame').srcdoc = html;
+            } catch (error) {
+                console.error('Error fetching game HTML:', error);
+                // Fallback to direct URL to ensure HTML execution
+                document.querySelector('.main-content').style.display = 'none';
+                document.getElementById('gameView').style.display = 'flex';
+                document.getElementById('gameFrame').srcdoc = '';
+                document.getElementById('gameFrame').src = url;
+            }
         }
 
         function showGameList() {
