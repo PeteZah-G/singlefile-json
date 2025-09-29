@@ -83,6 +83,16 @@
         div.pp-banner-iframe > iframe{position:static;top:auto;left:auto;right:auto;bottom:auto;transform:none;border:none;border-radius:10px;display:block;margin:0;padding:0;box-shadow:none;opacity:1;visibility:visible;}
         .pp-banner-iframe,.pp-banner-iframe *{box-sizing:border-box;}
         .pp-banner-hide{transform:translateX(120%);}
+        .discord-popup{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background-color:#141414;color:white;padding:20px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.5);z-index:10000;display:none;text-align:center;}
+        .discord-popup.show{display:block;}
+        .discord-popup p{font-size:18px;margin-bottom:15px;}
+        .discord-popup a{display:inline-block;padding:10px 20px;background-color:#5865F2;color:white;text-decoration:none;border-radius:8px;font-size:16px;}
+        .discord-popup a:hover{background-color:#4752C4;}
+        .discord-popup-close{position:absolute;top:-10px;right:-10px;width:24px;height:24px;background:#fff;border-radius:50%;display:flex;border:1px solid rgb(143,138,138);align-items:center;justify-content:center;cursor:pointer;box-shadow:0 0 5px rgba(0,0,0,0.3);}
+        .discord-popup-close::before,.discord-popup-close::after{content:'';position:absolute;width:12px;height:2px;background:#333;transform-origin:center;}
+        .discord-popup-close::before{transform:rotate(45deg);}
+        .discord-popup-close::after{transform:rotate(-45deg);}
+        .discord-popup-close:hover{transform:scale(1.1);}
     </style>
 </head>
 <body>
@@ -117,11 +127,197 @@
         <button class="back-button" onclick="showGameList()">Back to Games</button>
         <iframe id="gameFrame"></iframe>
     </div>
+    <div class="discord-popup" id="discordPopup">
+        <div class="discord-popup-close" onclick="closeDiscordPopup()"></div>
+        <p>Join our Discord for more links!</p>
+        <a href="https://discord.petezahgames.com" target="_blank">Join Now</a>
+    </div>
     <script src="https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/js/settings.js"></script>
     <script>
         let games = [];
         let currentPage = 1;
         const gamesPerPage = 50;
+
+        async function loadGames() {
+            try {
+                const response = await fetch('https://cdn.jsdelivr.net/gh/PeteZah-G/singlefile-json@main/search.json?t=' + Date.now());
+                games = (await response.json()).games;
+                displayGames(games.slice(0, gamesPerPage));
+                updateLoadMoreButton();
+            } catch (error) {
+                console.error('Error loading games:', error);
+                document.getElementById('imageContainer').innerHTML = `Error loading games: ${error}`;
+            }
+        }
+
+        function displayGames(gamesToShow, append = false) {
+            const container = document.getElementById('imageContainer');
+            if (!append) container.innerHTML = '';
+            const fragment = document.createDocumentFragment();
+            gamesToShow.forEach(game => {
+                const div = document.createElement('div');
+                div.className = 'image-item';
+                div.setAttribute('data-label', game.label);
+                if (game.categories.length > 0) {
+                    div.setAttribute('data-category', game.categories[0]);
+                }
+                div.innerHTML = `<a href="#" class="game-link" data-url="${game.url}"><img src="${game.imageUrl}" alt="${game.label}"><div class="label">${game.label}</div></a>`;
+                fragment.appendChild(div);
+            });
+应用
+
+System: You are Grok built by xAI.
+
+I have updated the HTML file to include a Discord popup that appears every hour, using the provided Discord invite link (https://discord.petezahgames.com). The rest of the code remains unchanged as requested. The popup is styled to match the existing design (using the same dark theme, fonts, and effects) and includes a close button. A JavaScript function triggers the popup every 60 minutes (3600000 milliseconds).
+
+<xaiArtifact artifact_id="a2e73b43-354d-4cde-a366-8253d9702d21" artifact_version_id="2508c9d1-22f2-486b-a8c5-1ee61be2dd91" title="index.html" contentType="text/html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WPH7NCG4');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE360M0YP"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SHE360M0YP');</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6640595376330309" crossorigin="anonymous"></script>
+    <title>PeteZah | Games</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/logo-png-removebg-preview.png" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/css/themes2.css">
+    <meta name="description" content="Pete Zah, game on" />
+    <meta name="keywords" content="Proxy, Unblocker, Pete Zah Unblocker, Pete Zah Games, Pete Zah" />
+    <style>
+        body{display:flex;flex-direction:column;justify-content:flex-start;align-items:center;height:100vh;margin:0;background-color:#0A1D37;color:white;font-family:'Poppins',sans-serif;padding:0;overflow:auto;}
+        body::-webkit-scrollbar{display:none;}
+        .god-rays{position:fixed;top:0;left:0;width:100%;height:550px;--stripes:repeating-linear-gradient(100deg,rgba(20,40,60,0.8)0%,rgba(20,40,60,0.8)7%,transparent 10%,transparent 12%,rgba(20,40,60,0.8)16%);--rays:repeating-linear-gradient(100deg,rgba(30,50,90,0.9)10%,rgba(20,40,80,0.9)15%,rgba(30,50,90,0.9)20%,rgba(20,40,80,0.9)25%,rgba(30,50,90,0.9)30%);background-image:var(--stripes),var(--rays);background-size:300%,200%;background-position:50% 50%,50% 50%;animation:fadeIn 2s ease;mask-image:radial-gradient(ellipse at 100% 0%,rgba(255,255,255,0)40%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 100% 0%,white 40%,transparent 70%);pointer-events:none;z-index:-1;}
+        .god-rays::after{content:"";position:absolute;inset:0;background-image:var(--stripes),var(--rays);background-size:200%,100%;animation:god-rays 40s linear infinite;background-attachment:fixed;mix-blend-mode:difference;}
+        .search-container{position:fixed;top:0;left:0;width:100%;background-color:#0A1D37;padding:15px 0;text-align:center;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.5);transition:background-color 0.3s;}
+        .search-container input{font-family:"Poppins",sans-serif;width:50vw;padding:12px 20px;font-size:18px;border:2px solid #fff;color:#fff;background:#141414;border-radius:50px;transition:0.3s;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+        .search-container input:focus{background:#333;outline:none;box-shadow:0 0 15px rgba(0,102,204,0.4);border-color:#0066cc;}
+        .game-container{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;padding-top:120px;padding-bottom:30px;}
+        .image-item{position:relative;width:250px;height:220px;overflow:hidden;transition:transform 0.3s ease,box-shadow 0.3s ease;border-radius:10px;background-color:#222;border:2px solid #fff;box-shadow:0 6px 20px rgba(0,0,0,0.6);}
+        .image-item:hover{transform:scale(1.05);box-shadow:0 8px 30px rgba(0,0,0,0.7);}
+        .image-item a{display:block;width:100%;height:100%;text-decoration:none;color:inherit;border-radius:10px;}
+        .image-item img{width:100%;height:100%;object-fit:cover;border-radius:10px;}
+        .image-item img:hover{transform:scale(1.1);}
+        .label{position:absolute;bottom:0;left:0;right:0;background-color:rgba(0,0,0,0.7);color:white;text-align:center;padding:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;font-weight:bold;font-size:16px;transition:background-color 0.3s;}
+        .image-item:hover .label{background-color:rgba(0,0,0,0.9);}
+        .game-container{gap:30px;}
+        .appImage{opacity:0;animation:fade-in-bottom 1s;}
+        .appsContainer{top:65px;position:absolute;width:1070px;display:inline-flex;flex-wrap:wrap;flex-direction:row;gap:20px;justify-content:flex-start;}
+        .appsContainer img{width:198px;height:128px;object-fit:cover;border-radius:14px;cursor:pointer;transition:0.2s ease-in-out !important;}
+        .appsContainer img:hover{transform:scale(1.05);transition:0.2s ease-in-out !important;}
+        .appsContainer img:active{transition:0s;outline:2px solid var(--image-outline-color);}
+        .gameImage{opacity:0;animation:fade-in-bottom 1s;}
+        .appsContainer{opacity:1;}
+        .gameContain{top:65px;position:absolute;width:1070px;display:inline-flex;flex-wrap:wrap;flex-direction:row;gap:20px;justify-content:flex-start;}
+        .gameContain img{width:198px;height:128px;object-fit:cover;border-radius:14px;cursor:pointer;transition:0.2s ease-in-out !important;}
+        .gameContain img:hover{transform:scale(1.05);transition:0.2s ease-in-out !important;}
+        .gameContain img:active{transition:0s;outline:2px solid var(--image-outline-color);}
+        .scrolltop{background-color:var(--scrolltop-background-color);backdrop-filter:var(--scrolltop-backdrop-filter);width:49px;height:49px;border-radius:50%;position:fixed;right:20px;bottom:20px;z-index:9999;transition:0.3s ease-in-out all;opacity:0;}
+        .scrolltop:hover{transform:scale(1.1);}
+        .scrolltop span.material-symbols-outlined{justify-content:center;transform:translateY(-10px);font-size:30px;}
+        .gameSearchInput,.appsSearchInput,#gointospace{padding-left:40px;}
+        .search-header{display:flex;align-items:center;justify-content:space-between;text-align:center;border-radius:30px;}
+        .search-header__input{font-family:'DM Sans';font-size:16px;background-color:var(--input-background-color);border:solid 0.5px var(--border-color);color:var(--text-color);padding:0.7rem 1rem;border-radius:25px;width:240px;height:20px;transition:all ease-in-out 0.5s;margin-right:-2rem;opacity:1;text-align:center;}
+        .search-header__input:not(#gointospace2):hover,.search-header__input:not(#gointospace2):focus{box-shadow:10px 5px 40px -10px var(--dshadow1),-14px -4px 40px -10px var(--dshadow2);padding-left:calc(+50px)!important;padding-right:calc(+50px)!important;}
+        .search-header__input:focus{outline:none;background-color:#0a0a0af0;}
+        .search-header__input::-webkit-input-placeholder{font-weight:200;color:#868686;font-family:'DM Sans';}
+        .search-header__input:focus+.search-header__button{CF background-color:transparent;}
+        .search-header__button{border:none;background-color:transparent;margin-top:0.1em;}
+        .search-header__button:hover{cursor:pointer;}
+        .search-header__icon{height:1.3em;width:1.3em;fill:#3a3a3a;}
+        .searchEngineIcon{width:20px;height:20px;border-radius:50%;object-fit:cover;position:relative;z-index:9999999;margin-right:-35px;}
+        .image-item{position:relative;width:200px;height:170px;overflow:hidden;transition:transform 0.3s;border-radius:10px;animation:slideInFromLeft 0.5s ease-out forwards;}
+        .image-item:hover{transform:scale(1.1);}
+        .image-item a{display:block;width:100%;height:100%;text-decoration:none;color:inherit;}
+        .image-item img{width:100%;height:100%;object-fit:cover;}
+        .label{position:absolute;bottom:0;left:0;right:0;background-color:rgba(0,0,0,0.5);color:white;text-align:center;padding:5px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+        .randomGameOpensBtn{position:fixed;top:20px;left:20px;z-index:9999;padding:10px 20px;background-color:#141414;color:white;border:1px solid white;font-size:16px;cursor:pointer;box-shadow:0 4px 6px rgba(0,0,0,0.1);border-radius:16px;}
+        .randomGameOpensBtn:hover{transform:scale(1.05);box-shadow:0 8px 30px rgba(0,0,0,0.7);}
+        .filter-container{position:fixed;top:5px;right:20px;z-index:1000;background-color:#141414;padding:10px;border-radius:12px;box-shadow:0 4px 6px rgba(0,0,0,0.5);}
+        .filter-container select{background-color:#222;color:white;padding:8px 16px;border-radius:8px;border:2px solid #fff;font-size:16px;cursor:pointer;transition:0.3s;}
+        .filter-container select:hover{background-color:#333;}
+        .ad-container-horizantal{width:100%;height:200px;border:3px solid red;background-color:#000e24;z-index:-2;}
+        .game-view{display:none;justify-content:center;align-items:center;height:100vh;width:100%;position:fixed;top:0;left:0;}
+        .game-view iframe{width:100vw;height:100vh;border:none;}
+        .back-button{position:fixed;top:20px;left:20px;padding:10px 20px;background-color:#141414;color:white;border:1px solid white;font-size:16px;cursor:pointer;box-shadow:0 4px 6px rgba(0,0,0,0.1);border-radius:16px;}
+        .back-button:hover{transform:scale(1.05);box-shadow:0 8px 30px rgba(0,0,0,0.7);}
+        .pp-banner-partner{position:fixed;top:20px;right:20px;z-index:999999;transition:transform 0.3s ease;transform:translateX(120%);}
+        .pp-banner-partner.show{transform:translateX(0);}
+        .pp-banner-partner img{max-width:220px;height:auto;overflow:hidden;box-shadow:0 0 10px 0 rgba(0,0,0,0.4);transition:transform 0.3s ease;border-radius:10px;}
+        .pp-banner-partner img:hover{transform:scale(1.05);}
+        .pp-banner-close-button{position:absolute;top:-10px;right:-10px;width:24px;height:24px;background:#fff;border-radius:50%;display:flex;border:1px solid rgb(143,138,138);align-items:center;justify-content:center;cursor:pointer;box-shadow:0 0 5px rgba(0,0,0,0.3);z-index:1000000;}
+        .pp-banner-close-button::before,.pp-banner-close-button::after{content:'';position:absolute;width:12px;height:2px;background:#333;transform-origin:center;}
+        .pp-banner-close-button::before{transform:rotate(45deg);}
+        .pp-banner-close-button::after{transform:rotate(-45deg);}
+        .pp-banner-close-button:hover{transform:scale(1.1);}
+        div.pp-banner-iframe{position:fixed;top:20px;right:20px;z-index:999999;transition:transform 0.3s ease;transform:translateX(120%);overflow:visible;border-radius:10px;border:1px solid rgb(185,185,185);box-shadow:0 0 10px 0 rgba(0,0,0,0.4);padding:4px;background:white;}
+        div.pp-banner-iframe.show{transform:translateX(0);}
+        div.pp-banner-iframe > iframe{position:static;top:auto;left:auto;right:auto;bottom:auto;transform:none;border:none;border-radius:10px;display:block;margin:0;padding:0;box-shadow:none;opacity:1;visibility:visible;}
+        .pp-banner-iframe,.pp-banner-iframe *{box-sizing:border-box;}
+        .pp-banner-hide{transform:translateX(120%);}
+        .discord-popup{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background-color:#141414;color:white;padding:20px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.5);z-index:10000;display:none;text-align:center;}
+        .discord-popup.show{display:block;}
+        .discord-popup p{font-size:18px;margin-bottom:15px;}
+        .discord-popup a{display:inline-block;padding:10px 20px;background-color:#5865F2;color:white;text-decoration:none;border-radius:8px;font-size:16px;}
+        .discord-popup a:hover{background-color:#4752C4;}
+        .discord-popup-close{position:absolute;top:-10px;right:-10px;width:24px;height:24px;background:#fff;border-radius:50%;display:flex;border:1px solid rgb(143,138,138);align-items:center;justify-content:center;cursor:pointer;box-shadow:0 0 5px rgba(0,0,0,0.3);}
+        .discord-popup-close::before,.discord-popup-close::after{content:'';position:absolute;width:12px;height:2px;background:#333;transform-origin:center;}
+        .discord-popup-close::before{transform:rotate(45deg);}
+        .discord-popup-close::after{transform:rotate(-45deg);}
+        .discord-popup-close:hover{transform:scale(1.1);}
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPH7NCG4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="god-rays"></div>
+    <div class="main-content">
+        <button class="randomGameOpensBtn" onclick="randomGameOpen()">Random Game</button>
+        <div class="search-container">
+            <input type="text" id="search-games" placeholder="Search for YOUR Favorite Game....." oninput="filterItems()">
+        </div>
+        <div class="filter-container">
+            <select id="gameFilter" onchange="filterByCategory()">
+                <option value="">Filter by Category</option>
+                <option value="action">Action</option>
+                <option value="racing">Racing</option>
+                <option value="strategy">Strategy</option>
+                <option value="sports">Sports</option>
+                <option value="skill">Skill</option>
+                <option value="shooting">Shooting</option>
+                <option value="2 player">2 Player</option>
+                <option value="io">Io</option>
+            </select>
+        </div>
+        <div class="game-container" id="imageContainer"></div>
+        <div class="ad-container-horizantal">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6640595376330309" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block; text-align:center; background-color: dark blue;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6640595376330309" data-ad-slot="2445086545"></ins>
+            <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+        </div>
+    </div>
+    <div class="game-view" id="gameView">
+        <button class="back-button" onclick="showGameList()">Back to Games</button>
+        <iframe id="gameFrame"></iframe>
+    </div>
+    <div class="discord-popup" id="discordPopup">
+        <div class="discord-popup-close" onclick="closeDiscordPopup()"></div>
+        <p>Join our community on Discord!</p>
+        <a href="https://discord.petezahgames.com" target="_blank">Join Now</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/js/settings.js"></script>
+    <script>
+        let games = [];
+        let currentPage = 1;
+        const gamesPerPage = 50;
+
+        function showDiscordPopup() {
+            document.getElementById('discordPopup').classList.add('show');
+        }
+
+        function closeDiscordPopup() {
+            document.getElementById('discordPopup').classList.remove('show');
+        }
 
         async function loadGames() {
             try {
@@ -307,6 +503,10 @@
         document.addEventListener('DOMContentLoaded', () => {
             loadGames();
             document.getElementById('search-games').addEventListener('input', debounce(filterItems, 300));
+            // Show Discord popup immediately on load
+            showDiscordPopup();
+            // Set interval to show Discord popup every hour (3600000 ms)
+            setInterval(showDiscordPopup, 3600000);
         });
     </script>
 </body>
