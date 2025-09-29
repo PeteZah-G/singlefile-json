@@ -1,4 +1,3 @@
-
 {
   "games": [
     {
@@ -7,14 +6,6 @@
       "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main/taggame.jpg",
       "categories": [
         "2 player"
-      ]
-    },
-    {
-      "label": "Poly Track",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/polytrack/index.html",
-      "imageUrl": "/storage/ag/g/polytrack/splash.png",
-      "categories": [
-        "racing"
       ]
     },
     {
@@ -96,7 +87,7 @@
     {
       "label": "Slope 2",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/slope2/index.html",
-      "imageUrl": "/storage/ag/g/slope2/splash.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/slope2/splash.png",
       "categories": [
         "action"
       ]
@@ -104,7 +95,7 @@
     {
       "label": "Slope",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/slope/index.html",
-      "imageUrl": "/storage/ag/g/slope/IMG_5256.jpeg",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/slope/IMG_5256.jpeg",
       "categories": [
         "skill"
       ]
@@ -314,7 +305,7 @@
     {
       "label": "2048",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/2048/index.html",
-      "imageUrl": "/storage/ag/g/2048/meta/apple-touch-icon.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/2048/meta/apple-touch-icon.png",
       "categories": [
         "strategy"
       ]
@@ -338,7 +329,7 @@
     {
       "label": "Doge Miner",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/DogeMiner/index.html",
-      "imageUrl": "/storage/ag/g/DogeMiner/img/dogeminer_300x300.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/DogeMiner/img/dogeminer_300x300.png",
       "categories": [
         "skill"
       ]
@@ -371,7 +362,7 @@
     {
       "label": "Bitlife",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/bite/index.html",
-      "imageUrl": "/storage/ag/g/bite/logo.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/bite/logo.png",
       "categories": [
         "skill"
       ]
@@ -387,7 +378,7 @@
     {
       "label": "A.D.O.F.A.I",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/adofai/index.html",
-      "imageUrl": "/storage/ag/g/adofai/splash.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/adofai/splash.png",
       "categories": [
         "action"
       ]
@@ -395,7 +386,7 @@
     {
       "label": "Basketball Stars",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/basketball-stars/index.html",
-      "imageUrl": "/storage/ag/g/basketball-stars/assets/images/basketball-stars.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/basketball-stars/assets/images/basketball-stars.png",
       "categories": [
         "sports"
       ]
@@ -411,7 +402,7 @@
     {
       "label": "Awesome Tanks 2",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/awesometanks2/index.html",
-      "imageUrl": "/storage/ag/g/awesometanks2/IMG_5282.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/awesometanks2/IMG_5282.png",
       "categories": [
         "action"
       ]
@@ -435,7 +426,7 @@
     {
       "label": "Soccer Random",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/soccerrandom/index.html",
-      "imageUrl": "/storage/ag/g/soccerrandom/unnamed.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/soccerrandom/unnamed.png",
       "categories": [
         "sports"
       ]
@@ -443,7 +434,7 @@
     {
       "label": "Bad Ice Cream",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/bad-ice-cream/index.html",
-      "imageUrl": "/storage/ag/g/bad-ice-cream/bad-ice-cream.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/bad-ice-cream/bad-ice-cream.png",
       "categories": [
         "action"
       ]
@@ -451,7 +442,7 @@
     {
       "label": "Bad Ice Cream 2",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/bad-ice-cream-2/index.html",
-      "imageUrl": "/storage/ag/g/bad-ice-cream-2/bad-ice-cream-2.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/bad-ice-cream-2/bad-ice-cream-2.png",
       "categories": [
         "action"
       ]
@@ -459,7 +450,7 @@
     {
       "label": "Bad Ice Cream 3",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/bad-ice-cream-3/index.html",
-      "imageUrl": "/storage/ag/g/bad-ice-cream-3/bad-ice-cream-3.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/bad-ice-cream-3/bad-ice-cream-3.png",
       "categories": [
         "action"
       ]
@@ -467,7 +458,7 @@
     {
       "label": "Angry Sharks",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/angry-sharks/index.html",
-      "imageUrl": "/storage/ag/g/angry-sharks/assets/favicon/icon-512x512.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/angry-sharks/assets/favicon/icon-512x512.png",
       "categories": [
         "action"
       ]
@@ -475,7 +466,7 @@
     {
       "label": "Breaking the Bank",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/breakingthebank/index.html",
-      "imageUrl": "/storage/ag/g/breakingthebank/breakingthebank.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/breakingthebank/breakingthebank.png",
       "categories": [
         "action"
       ]
@@ -483,7 +474,7 @@
     {
       "label": "Venge",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/venge/index.html",
-      "imageUrl": "/storage/ag/g/venge/IMG_5229.jpeg",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/venge/IMG_5229.jpeg",
       "categories": [
         "shooting"
       ]
@@ -491,7 +482,7 @@
     {
       "label": "Drive Mad",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/drive-mad/index.html",
-      "imageUrl": "/storage/ag/g/drive-mad/logo.jpg",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/drive-mad/logo.jpg",
       "categories": [
         "skill"
       ]
@@ -499,7 +490,7 @@
     {
       "label": "Creative Kill Chamber",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/creativekillchamber/index.html",
-      "imageUrl": "/storage/ag/g/creativekillchamber/creativekillchamber.jpg",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/creativekillchamber/creativekillchamber.jpg",
       "categories": [
         "skill",
         "shooting"
@@ -508,7 +499,7 @@
     {
       "label": "Flappy Bird",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/flappy-bird/index.html",
-      "imageUrl": "/storage/ag/g/flappy-bird/assets/thumb.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/flappy-bird/assets/thumb.png",
       "categories": [
         "skill"
       ]
@@ -516,7 +507,7 @@
     {
       "label": "Ducklife",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/ducklife/index.html",
-      "imageUrl": "/storage/ag/g/ducklife/IMG_5307.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/ducklife/IMG_5307.png",
       "categories": [
         "action"
       ]
@@ -524,7 +515,7 @@
     {
       "label": "Ducklife 2",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/ducklife2/index.html",
-      "imageUrl": "/storage/ag/g/ducklife2/IMG_5308.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/ducklife2/IMG_5308.png",
       "categories": [
         "action"
       ]
@@ -532,7 +523,7 @@
     {
       "label": "Ducklife 3",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/ducklife3/index.html",
-      "imageUrl": "/storage/ag/g/ducklife3/IMG_5309.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/ducklife3/IMG_5309.png",
       "categories": [
         "action"
       ]
@@ -540,7 +531,7 @@
     {
       "label": "Ducklife 4",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/ducklife4/index.html",
-      "imageUrl": "/storage/ag/g/ducklife4/IMG_5310.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/ducklife4/IMG_5310.png",
       "categories": [
         "action"
       ]
@@ -548,7 +539,7 @@
     {
       "label": "Red Ball 4",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/redball/1.html",
-      "imageUrl": "/storage/ag/g/redball/IMG_5315.jpeg",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/redball/IMG_5315.jpeg",
       "categories": [
         "skill"
       ]
@@ -556,7 +547,7 @@
     {
       "label": "Red Ball 4 Vol 2",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/redball/2.html",
-      "imageUrl": "/storage/ag/g/redball/IMG_5316.webp",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/redball/IMG_5316.webp",
       "categories": [
         "skill"
       ]
@@ -564,7 +555,7 @@
     {
       "label": "Red Ball 4 Vol 3",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/redball/3.html",
-      "imageUrl": "/storage/ag/g/redball/IMG_5317.webp",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/redball/IMG_5317.webp",
       "categories": [
         "skill"
       ]
@@ -580,7 +571,7 @@
     {
       "label": "Gun Mayhem",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/guymayhem/index.html",
-      "imageUrl": "/storage/ag/g/guymayhem/icon.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/guymayhem/icon.png",
       "categories": [
         "shooting"
       ]
@@ -588,7 +579,7 @@
     {
       "label": "Gun Mayhem 2",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/gunmayhem2/index.html",
-      "imageUrl": "/storage/ag/g/gunmayhem2/gh2.webp",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/gunmayhem2/gh2.webp",
       "categories": [
         "shooting"
       ]
@@ -596,7 +587,7 @@
     {
       "label": "Gun Mayhem Redux",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/gunmayhemredux/index.html",
-      "imageUrl": "/storage/ag/g/gunmayhemredux/gunmayhemredux.jpeg",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/gunmayhemredux/gunmayhemredux.jpeg",
       "categories": [
         "shooting"
       ]
@@ -604,7 +595,7 @@
     {
       "label": "Run 3",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/run3/index.html",
-      "imageUrl": "/storage/ag/g/run3/run3.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/run3/run3.png",
       "categories": [
         "skill"
       ]
@@ -612,7 +603,7 @@
     {
       "label": "Tomb of the Mask",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/totm/index.html",
-      "imageUrl": "/storage/ag/g/totm/splash.webp",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/totm/splash.webp",
       "categories": [
         "skill"
       ]
@@ -620,7 +611,7 @@
     {
       "label": "Madness Accelerant",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/ma/index.html",
-      "imageUrl": "/storage/ag/g/ma/IMG_5320.jpeg",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/ma/IMG_5320.jpeg",
       "categories": [
         "skill"
       ]
@@ -628,7 +619,7 @@
     {
       "label": "A Small World Cup",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/asmallworldcup/index.html",
-      "imageUrl": "/storage/ag/g/asmallworldcup/icon-256.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/asmallworldcup/icon-256.png",
       "categories": [
         "sports"
       ]
@@ -636,7 +627,7 @@
     {
       "label": "Block Blast",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/blockblast/index.html",
-      "imageUrl": "/storage/ag/g/blockblast/s.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/blockblast/s.png",
       "categories": [
         "strategy"
       ]
@@ -644,7 +635,7 @@
     {
       "label": "Snow Rider 3D",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/snowrider3d/index.html",
-      "imageUrl": "/storage/ag/g/snowrider3d/snow-rider-3d.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/snowrider3d/snow-rider-3d.png",
       "categories": [
         "skill"
       ]
@@ -652,7 +643,7 @@
     {
       "label": "Google Snake",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/google-snake/index.html",
-      "imageUrl": "/storage/ag/g/google-snake/img/snake.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/google-snake/img/snake.png",
       "categories": [
         "skill"
       ]
@@ -660,7 +651,7 @@
     {
       "label": "Age of War",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/age-of-war/index.html",
-      "imageUrl": "/storage/ag/g/age-of-war/icon.jpg",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/age-of-war/icon.jpg",
       "categories": [
         "action"
       ]
@@ -668,7 +659,7 @@
     {
       "label": "Angry Birds",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/angrybirds/index.html",
-      "imageUrl": "/storage/ag/g/angrybirds/logo.webp",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/angrybirds/logo.webp",
       "categories": [
         "skill"
       ]
@@ -676,7 +667,7 @@
     {
       "label": "Astray",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/astray/index.html",
-      "imageUrl": "/storage/ag/g/astray/astray.jpeg",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/astray/astray.jpeg",
       "categories": [
         "action"
       ]
@@ -684,7 +675,7 @@
     {
       "label": "Bounce Back",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/bounceback/index.html",
-      "imageUrl": "/storage/ag/g/bounceback/screenshot.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/bounceback/screenshot.png",
       "categories": [
         "skill"
       ]
@@ -692,7 +683,7 @@
     {
       "label": "Blocky Snakes",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/blocky-snakes/index.html",
-      "imageUrl": "/storage/ag/g/blocky-snakes/icon.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/blocky-snakes/icon.png",
       "categories": [
         "skill"
       ]
@@ -700,7 +691,7 @@
     {
       "label": "Little Alchemy",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/littlealchemy/index.html",
-      "imageUrl": "/storage/ag/g/littlealchemy/image_2024-08-30_152806221.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/littlealchemy/image_2024-08-30_152806221.png",
       "categories": [
         "strategy"
       ]
@@ -708,7 +699,7 @@
     {
       "label": "Little Alchemy 2",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/littlealchemy2/index.html",
-      "imageUrl": "/storage/ag/g/littlealchemy2/a2.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/littlealchemy2/a2.png",
       "categories": [
         "strategy"
       ]
@@ -724,7 +715,7 @@
     {
       "label": "Stick Merge",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/stick-merge/index.html",
-      "imageUrl": "/storage/ag/g/stick-merge/splash.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/stick-merge/splash.png",
       "categories": [
         "skill"
       ]
@@ -732,7 +723,7 @@
     {
       "label": "Retro Bowl",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/retro-bowl/index.html",
-      "imageUrl": "/storage/ag/g/retro-bowl/img/icon.jpg",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/retro-bowl/img/icon.jpg",
       "categories": [
         "sports"
       ]
@@ -740,7 +731,7 @@
     {
       "label": "Core Ball",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/core-ball/index.html",
-      "imageUrl": "/storage/ag/g/core-ball/coreball.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/core-ball/coreball.png",
       "categories": [
         "strategy"
       ]
@@ -748,7 +739,7 @@
     {
       "label": "Deepest Sword",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/deepest-sword/index.html",
-      "imageUrl": "/storage/ag/g/deepest-sword/deepestsword.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/deepest-sword/deepestsword.png",
       "categories": [
         "action"
       ]
@@ -756,7 +747,7 @@
     {
       "label": "Zombs Royale",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/zombsroyale/index.html",
-      "imageUrl": "/storage/ag/g/zombsroyale/zombsroyale.webp",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/zombsroyale/zombsroyale.webp",
       "categories": [
         "skill"
       ]
@@ -764,7 +755,7 @@
     {
       "label": "Pokemon Ruby",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/pokemongames/pokemonruby/index.html",
-      "imageUrl": "/storage/ag/g/pokemongames/pokemonruby/pokemon ruby.jpeg",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/pokemongames/pokemonruby/pokemon ruby.jpeg",
       "categories": [
         "action"
       ]
@@ -772,7 +763,7 @@
     {
       "label": "Spider-Man Venoms Vengence",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/spidermanvenomsvengence/index.html",
-      "imageUrl": "/storage/ag/g/spidermanvenomsvengence/splash.png",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/spidermanvenomsvengence/splash.png",
       "categories": [
         "action"
       ]
@@ -780,7 +771,7 @@
     {
       "label": "Slow Roads",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/slow-roads/index.html",
-      "imageUrl": "/storage/ag/g/slowroads/splash.jpeg",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/slowroads/splash.jpeg",
       "categories": [
         "action"
       ]
