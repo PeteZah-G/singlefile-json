@@ -43,32 +43,6 @@
       ]
     },
     {
-      "label": "Table Tennis World Tour",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g2/table-tennis-world-tour/index.html",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main3/tabletennisworldtour.png",
-      "categories": [
-        "sports"
-      ]
-    },
-    {
-      "label": "Buckshot Roulette",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g2/buckshot-roullete/index.html",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/genizy/web-port@main/buckshot-roulette/buckshot-roulette.icon.png",
-      "categories": [
-        "skill",
-        "strategy"
-      ]
-    },
-    {
-      "label": "Ultrakill",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g2/ultrakill/index.html",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main2/ultrakill.jpeg",
-      "categories": [
-        "skill",
-        "strategy"
-      ]
-    },
-    {
       "label": "Space Huggers",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/spacehuggers",
       "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main/spacehuggers.jpg",
@@ -77,83 +51,11 @@
       ]
     },
     {
-      "label": "Funny Shooter",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/funnyshooter",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main/funnyshooter.jpg",
-      "categories": [
-        "shooting"
-      ]
-    },
-    {
-      "label": "Slope 2",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/slope2/index.html",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/slope2/splash.png",
-      "categories": [
-        "action"
-      ]
-    },
-    {
       "label": "Slope",
       "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/slope/index.html",
       "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/slope/IMG_5256.jpeg",
       "categories": [
         "skill"
-      ]
-    },
-    {
-      "label": "Cookie Clicker",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/cookie-clicker/index.html",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main/cookie.jpeg",
-      "categories": [
-        "skill"
-      ]
-    },
-    {
-      "label": "Jelly Drift",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/jelly-drift/index.html",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main/jelly.jpeg",
-      "categories": [
-        "skill"
-      ]
-    },
-    {
-      "label": "Moto X3M",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/motox3m/index.html",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main/moto.jpg",
-      "categories": [
-        "action"
-      ]
-    },
-    {
-      "label": "Moto X3M 2",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/motox3m2/index.html",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main/moto2.jpg",
-      "categories": [
-        "action"
-      ]
-    },
-    {
-      "label": "Moto X3M 3",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/motox3m3/index.html",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main/moto3.jpg",
-      "categories": [
-        "action"
-      ]
-    },
-    {
-      "label": "Moto X3M 4: Winter",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/motox3m-winter/index.html",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main/moto4.jpg",
-      "categories": [
-        "action"
-      ]
-    },
-    {
-      "label": "Moto X3M 5: Pool",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/motox3m-pool/index.html",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main/moto5.jpg",
-      "categories": [
-        "action"
       ]
     },
     {
@@ -243,15 +145,6 @@
       "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main/tinyfishing.jpg",
       "categories": [
         "skill"
-      ]
-    },
-    {
-      "label": "10 Minutes Till Dawn",
-      "url": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/ag/g/10minutestilldawn",
-      "imageUrl": "https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/main/10mins.jpg",
-      "categories": [
-        "strategy",
-        "action"
       ]
     },
     {
