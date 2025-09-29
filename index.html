@@ -8,8 +8,8 @@
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SHE360M0YP');</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6640595376330309" crossorigin="anonymous"></script>
     <title>PeteZah | Games</title>
-    <link rel="icon" type="icon/x-icon" href="https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public//storage/images/logo-png-removebg-preview.png" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public//storage/css/themes2.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/images/logo-png-removebg-preview.png" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/css/themes2.css">
     <meta name="description" content="Pete Zah, game on" />
     <meta name="keywords" content="Proxy, Unblocker, Pete Zah Unblocker, Pete Zah Games, Pete Zah" />
     <style>
@@ -91,7 +91,7 @@
     <div class="main-content">
         <button class="randomGameOpensBtn" onclick="randomGameOpen()">Random Game</button>
         <div class="search-container">
-            <input type="text" id="search-games" placeholder="Search for YOUR Favorite Game....." onkeyup="filterItems()">
+            <input type="text" id="search-games" placeholder="Search for YOUR Favorite Game....." oninput="filterItems()">
         </div>
         <div class="filter-container">
             <select id="gameFilter" onchange="filterByCategory()">
@@ -115,9 +115,9 @@
     </div>
     <div class="game-view" id="gameView">
         <button class="back-button" onclick="showGameList()">Back to Games</button>
-        <iframe id="gameFrame" src=""></iframe>
+        <iframe id="gameFrame"></iframe>
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/docklib/partners@master/partner-a11f34f2.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/js/settings.js"></script>
     <script>
         let games = [];
         let currentPage = 1;
@@ -125,12 +125,13 @@
 
         async function loadGames() {
             try {
-                const response = await fetch('https://cdn.jsdelivr.net/gh/PeteZah-G/singlefile-json@main/games.json');
+                const response = await fetch('https://cdn.jsdelivr.net/gh/PeteZah-G/singlefile-json@main/games.json?t=' + Date.now());
                 games = (await response.json()).games;
                 displayGames(games.slice(0, gamesPerPage));
                 updateLoadMoreButton();
             } catch (error) {
                 console.error('Error loading games:', error);
+                document.getElementById('imageContainer').innerHTML = `Error loading games: ${error}`;
             }
         }
 
@@ -203,10 +204,17 @@
             updateLoadMoreButton();
         }
 
+        function filterByCategory() {
+            filterItems();
+        }
+
         async function showGame(url) {
+            if (url.startsWith('http')) {
+                window.open(url, '_blank');
+                return;
+            }
             try {
-                // Attempt to fetch the game HTML
-                const response = await fetch(url, { mode: 'cors' });
+                const response = await fetch(url + '?t=' + Date.now(), { mode: 'cors' });
                 if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
                 let html = await response.text();
                 // Compute base URL
@@ -217,26 +225,35 @@
                 } else {
                     html = html.replace(/<head[^>]*>/i, '$&<base href="' + baseUrl + '">');
                 }
-                // Ensure HTML is treated as HTML, not plaintext
+                // Write HTML to iframe's contentDocument
+                let gameFrame = document.getElementById('gameFrame');
+                if (gameFrame.contentDocument === null) {
+                    gameFrame = document.createElement('iframe');
+                    gameFrame.id = 'gameFrame';
+                    document.getElementById('gameView').appendChild(gameFrame);
+                }
+                gameFrame.contentDocument.open();
+                gameFrame.contentDocument.write(html);
+                gameFrame.contentDocument.close();
                 document.querySelector('.main-content').style.display = 'none';
                 document.getElementById('gameView').style.display = 'flex';
-                document.getElementById('gameFrame').src = '';
-                document.getElementById('gameFrame').srcdoc = html;
             } catch (error) {
-                console.error('Error fetching game HTML:', error);
-                // Fallback to direct URL to ensure HTML execution
-                document.querySelector('.main-content').style.display = 'none';
-                document.getElementById('gameView').style.display = 'flex';
-                document.getElementById('gameFrame').srcdoc = '';
-                document.getElementById('gameFrame').src = url;
+                console.error('Error loading game:', error);
+                alert('Failed to load game: ' + error);
+                // Fallback to opening in new tab
+                window.open(url, '_blank');
             }
         }
 
         function showGameList() {
             document.getElementById('gameView').style.display = 'none';
             document.querySelector('.main-content').style.display = 'block';
-            document.getElementById('gameFrame').src = '';
-            document.getElementById('gameFrame').srcdoc = '';
+            let gameFrame = document.getElementById('gameFrame');
+            if (gameFrame) {
+                gameFrame.contentDocument.open();
+                gameFrame.contentDocument.write('');
+                gameFrame.contentDocument.close();
+            }
         }
 
         function randomGameOpen() {
@@ -244,10 +261,6 @@
                 const randomIndex = Math.floor(Math.random() * games.length);
                 showGame(games[randomIndex].url);
             }
-        }
-
-        function filterByCategory() {
-            filterItems();
         }
 
         document.getElementById('imageContainer').addEventListener('click', (e) => {
@@ -279,6 +292,5 @@
             document.getElementById('search-games').addEventListener('input', debounce(filterItems, 300));
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/gh/PeteZah-Games/PeteZahGames@main/public/storage/js/settings.js"></script>
 </body>
 </html>
